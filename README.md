@@ -16,7 +16,7 @@ apt-get install consolekit xcompmgr xscreensaver feh xfce4-power-manager scrot \
   suckless-tools rxvt-unicode-256color network-manager-gnome pulseaudio-utils libtool libtool-bin \
   autoconf automake cmake g++ pkg-config unzip python3-pip \
   python3-notify2 python3-docopt python3-yaml python3-dev \
-  liblzma-dev xorg-dev libxft-dev xsel stalonetray pulseaudio lua-sec exuberant-ctags
+  liblzma-dev xorg-dev libxft-dev xsel stalonetray pulseaudio lua-sec exuberant-ctags clipit
 
 pip3 install neovim udiskie
 
