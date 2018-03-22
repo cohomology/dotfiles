@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH="/home/kilian/.stack/programs/x86_64-linux/ghc-nopie-8.2.2/bin:~/.local/bin:~/.cargo/bin:~/.xmonad/bin:$PATH"
+export PATH="~/.stack/programs/x86_64-linux/ghc-nopie-8.2.2/bin:~/.local/bin:~/.cargo/bin:~/.xmonad/bin:$PATH"
 
 # read .Xresources
 xrdb -merge .Xresources
