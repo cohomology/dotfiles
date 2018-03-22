@@ -15,8 +15,8 @@ Based uppon:
 apt-get install consolekit xcompmgr xscreensaver feh python-pip xfce4-power-manager scrot \
   suckless-tools rxvt-unicode-256color network-manager-gnome pulseaudio-utils libtool libtool-bin \
   autoconf automake cmake g++ pkg-config unzip python3-pip \
-  python-notify2 python3-notify2 python-docopt python3-docopt python-yaml python3-yaml python-dev \
-  liblzma-dev xorg-dev libxft-dev xsel stalonetray pulseaudio lua-sec
+  python3-notify2 python3-docopt python3-yaml python3-dev \
+  liblzma-dev xorg-dev libxft-dev xsel stalonetray pulseaudio lua-sec exuberant-ctags
 
 pip3 install neovim udiskie
 
