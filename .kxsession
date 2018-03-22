@@ -1,0 +1,39 @@
+#!/bin/bash
+
+export PATH=~/.xmonad/bin:$PATH
+
+# read .Xresources
+xrdb -merge .Xresources
+
+# set german keyboard
+setxkbmap de
+
+# load system tray
+stalonetray &
+
+# start screensaver
+xscreensaver -no-splash &
+
+# load background image
+feh --bg-scale ~/Bilder/background.jpg &
+
+# start removable file manager
+udiskie &
+
+# start xfce4 power manager
+xfce4-power-manager
+
+# start wireless / network applet
+nm-applet --sm-disable &
+
+# rxvt-unicode daemon
+urxvtd -q -f -o &
+
+# compositing effects
+xcompmgr -c -f &
+
+# start audio server
+pulseaudio --start &
+
+# xmonad 
+xmonad

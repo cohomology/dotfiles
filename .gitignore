@@ -2,3 +2,14 @@
 
 !.bashrc
 !.gitignore
+!.kxsession
+!.xsessionrc
+!.Xresources
+!.stalonetrayrc
+!.xmonad/xmobar.hs
+!.xmonad/xmonad.hs
+!.xmonad/bin/fixscreens
+!.xmonad/bin/pulse-volume.sh
+!.xmonad/bin/screenshot
+!.xmonad/bin/select-screenshot
+!.xmonad/bin/show-volume.py
