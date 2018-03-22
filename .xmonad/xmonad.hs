@@ -64,6 +64,7 @@ myWorkspaces = ["1:term","2:web","3:code","4:vm","5:media"] ++ map show [6..9]
 myManageHook = composeAll
     [ className =? "Firefox"          --> doShift "2:web"
     , className =? "chromium-browser" --> doShift "2:web"
+    , className =? "Firefox-esr"      --> doShift "2:web" 
     , className =? "Gimp"             --> doFloat
     , className =? "Emacs24"          --> doShift "3:code"
     , className =? "stalonetray"      --> doIgnore
