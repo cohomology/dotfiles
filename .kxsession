@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH=~/.xmonad/bin:$PATH
+export PATH="/home/kilian/.stack/programs/x86_64-linux/ghc-nopie-8.2.2/bin:~/.local/bin:~/.cargo/bin:~/.xmonad/bin:$PATH"
 
 # read .Xresources
 xrdb -merge .Xresources
@@ -15,7 +15,7 @@ stalonetray &
 xscreensaver -no-splash &
 
 # load background image
-feh --bg-scale ~/Bilder/background.jpg &
+feh --bg-scale ~/Bilder/schlaubetal.jpg &
 
 # start removable file manager
 udiskie &
@@ -36,4 +36,5 @@ xcompmgr -c -f &
 pulseaudio --start &
 
 # xmonad 
-xmonad
+stack exec xmonad -- --replace
+

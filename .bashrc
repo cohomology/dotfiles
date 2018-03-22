@@ -119,4 +119,5 @@ export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 alias home='git --work-tree=$HOME --git-dir=$HOME/.home'
+alias vim='nvim'
 
