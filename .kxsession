@@ -8,23 +8,11 @@ xrdb -merge .Xresources
 # set german keyboard
 setxkbmap de
 
-# load system tray
-stalonetray &
-
 # start screensaver
 xscreensaver -no-splash &
 
 # load background image
 feh --bg-scale ~/Bilder/schlaubetal.jpg &
-
-# start removable file manager
-udiskie &
-
-# start xfce4 power manager
-xfce4-power-manager
-
-# start wireless / network applet
-nm-applet --sm-disable &
 
 # rxvt-unicode daemon
 urxvtd -q -f -o &
@@ -36,5 +24,5 @@ xcompmgr -c -f &
 pulseaudio --start &
 
 # xmonad 
-stack exec xmonad -- --replace
+stack exec xmonad 
 

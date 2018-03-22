@@ -306,25 +306,24 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 -- per-workspace layout choices.
 --
 -- By default, do nothing.
-myStartupHook = return ()
-
+myStartupHook = 
+  do spawn "~/.xmonad/autostart" 
+     setWMName "LG3D"
+     return ()
 
 ------------------------------------------------------------------------
 -- Run xmonad with all the defaults we set up.
 --
 main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar.hs"
-  xmonad $ docks defaults {
+  xmonad $ docks defaults  {
       logHook = dynamicLogWithPP $ xmobarPP {
-            ppOutput = hPutStrLn xmproc
-          , ppTitle = xmobarColor xmobarTitleColor "" . shorten 100
-          , ppCurrent = xmobarColor xmobarCurrentWorkspaceColor ""
-          , ppSep = "   "
-      }
-      , manageHook = manageDocks <+> myManageHook
-      , startupHook = setWMName "LG3D"
+              ppOutput = hPutStrLn xmproc
+            , ppTitle = xmobarColor xmobarTitleColor "" . shorten 100
+            , ppCurrent = xmobarColor xmobarCurrentWorkspaceColor ""
+            , ppSep = "   "
+      }                          
   }
-
 
 ------------------------------------------------------------------------
 -- Combine it all together
@@ -350,6 +349,6 @@ defaults = defaultConfig {
 
     -- hooks, layouts
     layoutHook         = smartBorders $ myLayout,
-    manageHook         = myManageHook,
-    startupHook        = myStartupHook
+    startupHook        = myStartupHook,
+    manageHook         = manageDocks <+> myManageHook
 }

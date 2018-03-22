@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# load system tray
+stalonetray & 
+
+# start wireless / network applet
+nm-applet --sm-disable &
+ 
+# start removable file manager
+udiskie &
+
+# start xfce4 power manager
+xfce4-power-manager
+ 
