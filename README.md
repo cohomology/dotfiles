@@ -12,7 +12,7 @@ Based uppon:
 
 ```
 
-apt-get install consolekit xcompmgr xscreensaver feh python-pip xfce4-power-manager scrot \
+apt-get install consolekit xcompmgr xscreensaver feh xfce4-power-manager scrot \
   suckless-tools rxvt-unicode-256color network-manager-gnome pulseaudio-utils libtool libtool-bin \
   autoconf automake cmake g++ pkg-config unzip python3-pip \
   python3-notify2 python3-docopt python3-yaml python3-dev \
