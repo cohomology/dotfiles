@@ -3,6 +3,7 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
         , border = TopB
         , bgColor = "black"
         , fgColor = "grey"
+        , overrideRedirect = False    -- set the Override Redirect flag (Xlib)
         , position = TopW L 100
         , commands = [  Run Network "eno1" ["-L","0","-H","32","--normal","green","--high","red"] 10
                         , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
