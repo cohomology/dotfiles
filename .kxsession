@@ -23,6 +23,9 @@ xcompmgr -c -f &
 # start audio server
 pulseaudio --start &
 
+# start clipboard manager
+clipit --no-icon &
+
 # xmonad 
 stack exec xmonad 
 

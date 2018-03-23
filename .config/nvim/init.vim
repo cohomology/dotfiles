@@ -14,8 +14,10 @@ Plug 'tpope/vim-fugitive'
 
 " Language plugins
 Plug 'lervag/vimtex'
-Plug 'lukerandall/haskellmode-vim'
 Plug 'rollxx/vim-antlr'
+Plug 'vim-syntastic/syntastic'
+Plug 'bitc/vim-hdevtools' 
+Plug 'rust-lang/rust.vim' 
 
 " Functional plugins
 Plug 'vim-scripts/taglist.vim'
@@ -38,7 +40,6 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'bronson/vim-visual-star-search'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
-Plug 'rust-lang/rust.vim'
 Plug 'vim-airline/vim-airline-themes'
 
 call plug#end() 
@@ -159,6 +160,19 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1 
 let g:airline_theme='kalisi'
 
+" Haskell
+let g:haddock_browser="/usr/bin/firefox" 
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%* 
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0 
+
 " haskell configuration
 au BufEnter *.hs compiler ghc
 let g:haddock_browser="/usr/bin/firefox"
@@ -206,6 +220,9 @@ nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>m :Neomake!<cr>
 map <leader>L <Plug>(easymotion-bd-jk)
 map <leader>w <Plug>(easymotion-bd-w)
+
+au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
+au FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR> 
 " note that <leader>r is set by rtags!
 
 " quickfix toggle
