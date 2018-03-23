@@ -116,6 +116,7 @@ fi
 
 export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 
+source /home/kilian/.nix-profile/etc/profile.d/nix.sh
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 alias home='git --work-tree=$HOME --git-dir=$HOME/.home'

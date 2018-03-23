@@ -20,6 +20,9 @@ apt-get install consolekit xcompmgr xscreensaver feh xfce4-power-manager scrot \
 
 pip3 install neovim udiskie
 
+curl -sSL https://get.haskellstack.org/ | sh
+curl https://nixos.org/nix/install | sh
+
 stack install xmonad xmonad-contrib xmobar yeganesh
 ```
 
