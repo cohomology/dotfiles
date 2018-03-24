@@ -15,6 +15,7 @@ import XMonad.Layout.Tabbed
 import XMonad.Layout.ThreeColumns
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Actions.UpdateFocus
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
@@ -308,8 +309,9 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 --
 -- By default, do nothing.
 myStartupHook = 
-  do spawn "~/.xmonad/autostart" 
-     setWMName "LG3D"
+  do adjustEventInput 
+     setWMName "LG3D"  
+     spawn "~/.xmonad/autostart" 
      return ()
 
 ------------------------------------------------------------------------
@@ -351,5 +353,6 @@ defaults = defaultConfig {
     -- hooks, layouts
     layoutHook         = smartBorders $ myLayout,
     startupHook        = myStartupHook,
-    manageHook         = manageDocks <+> myManageHook
+    manageHook         = manageDocks <+> myManageHook,
+    handleEventHook    = focusOnMouseMove
 }
